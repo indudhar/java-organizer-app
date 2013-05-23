@@ -33,6 +33,16 @@
 			<version>${spring.version}</version>
 		</dependency>
 		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-dbcp</groupId>
+			<artifactId>commons-dbcp</artifactId>
+			<version>1.4</version>
+		</dependency>
+		<dependency>
 			<groupId>postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<version>9.1-901.jdbc4</version>
@@ -41,6 +51,25 @@
 	</dependencies>
 
 	<build>
+		<resources>
+	        <resource>
+	            <filtering>true</filtering>
+	            <directory>src/test/resources</directory>
+	            <includes>
+	                <include>**/*.properties</include>
+	            </includes>
+	            <excludes>
+	                <exclude>**/*local.properties</exclude>
+	            </excludes>
+	        </resource>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <includes>
+	                <include>**/*.properties</include>
+	                <include>**/*.xml</include>
+	            </includes>
+	        </resource>
+	    </resources>
 		<finalName>java-organizer-app</finalName>
 		<plugins>
 			<plugin>
