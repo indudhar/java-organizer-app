@@ -16,6 +16,7 @@ public class OrganizerController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public String printWelcome(ModelMap model) {
+		testingJDBC();
 		model.addAttribute("message", "Starter App");
 		return "start";
 
