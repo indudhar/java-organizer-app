@@ -11,6 +11,9 @@ import com.indu.data.User;
 public interface UserDAO {
 	
 	public void insert(User user);
+	public void update(User user);
+	public void deleteById(int id);
 	public User findById(int id);
+	public User findByUserName(String userName);
 
 }
