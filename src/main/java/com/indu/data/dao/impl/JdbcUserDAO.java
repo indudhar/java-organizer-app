@@ -7,6 +7,9 @@ import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 import com.indu.data.User;
 import com.indu.data.dao.UserDAO;
 
@@ -16,10 +19,12 @@ import com.indu.data.dao.UserDAO;
  * @author Indu Devanath
  *
  */
+@Component(value="jdbcUserDAO")
 public class JdbcUserDAO implements UserDAO {
 
 	private DataSource dataSource;
-
+	
+	@Autowired
 	public void setDataSource(DataSource dataSource) {
 		this.dataSource = dataSource;
 	}
