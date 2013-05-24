@@ -2,7 +2,7 @@ java-organizer-app
 ===========================
 
 We have been involved in building web apps for a long time, 
-and we constantly put together Spring, Hibernate and JQuery.  After each such adventure, we  
+and we constantly put together Spring and Hibernate.  After each such adventure, we  
 close the doors, give the code to the rightful owner and return empty handed.  All of these 
 implementations were proprietary.  Every time we embarked on a new project, we felt as if we are 
 doing the same thing all over again!  We strongly felt that we needed a base implementation that 
