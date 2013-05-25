@@ -1,4 +1,4 @@
-package com.indu.data;
+package com.indu.data.persistence;
 
 import java.io.Serializable;
 import java.util.Set;
@@ -13,6 +13,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
 
 /**
  * This is JPA Entity Persistence class
