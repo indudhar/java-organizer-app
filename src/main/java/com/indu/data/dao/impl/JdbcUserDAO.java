@@ -25,12 +25,10 @@ import com.indu.data.dao.UserDAO;
 @Repository(value="jdbcUserDAO")
 public class JdbcUserDAO implements UserDAO {
 
-	private DataSource dataSource;
 	private JdbcTemplate jdbcTemplate;
 	
 	@Autowired
 	public void setDataSource(DataSource dataSource) {
-		this.dataSource = dataSource;
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
 

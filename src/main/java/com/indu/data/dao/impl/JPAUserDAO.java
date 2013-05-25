@@ -8,6 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.indu.data.User;
 import com.indu.data.dao.UserDAO;
+import com.indu.data.persistence.Users;
 
 /**
  * JPA Implementation for working with User tables
@@ -15,7 +16,7 @@ import com.indu.data.dao.UserDAO;
  * @author Indu Devanath
  *
  */
-@Repository
+@Repository(value="jpaUserDAO")
 @Transactional
 public class JPAUserDAO implements UserDAO {
 	
@@ -60,8 +61,8 @@ public class JPAUserDAO implements UserDAO {
 	 * @see com.indu.data.dao.UserDAO#findById(int)
 	 */
 	@Override
-	public User findById(int id) {
-		return em.find(User.class, id);
+	public Users findById(int id) {
+		return em.find(Users.class, id);
 	}
 
 	/* (non-Javadoc)

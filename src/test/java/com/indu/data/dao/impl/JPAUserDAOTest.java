@@ -13,6 +13,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.indu.data.User;
 import com.indu.data.dao.UserDAO;
+import com.indu.data.persistence.Users;
 
 /**
  * Tests for JPAUserDAO class
@@ -34,7 +35,7 @@ public class JPAUserDAOTest {
 	@Before
 	public void initialize(){
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		this.userDAO = (UserDAO)context.getBean("jdbcUserDAO");
+		this.userDAO = (UserDAO)context.getBean("jpaUserDAO");
 		
 		this.mockUser = mock(User.class);
 		when(this.mockUser.getId()).thenReturn(1);
@@ -44,7 +45,7 @@ public class JPAUserDAOTest {
 	
 	@Test
 	public void findById(){
-		User user = this.userDAO.findById(1);
+		Users user = (Users)this.userDAO.findById(1);
 		assertEquals(user.getName(), "indu");
 		
 	}

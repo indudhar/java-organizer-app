@@ -27,17 +27,25 @@ public class Users implements Serializable{
 
 	private static final long serialVersionUID = -3260501382177368299L;
 	
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
+	@Column(name="id")
 	private Integer id;
+	
+	@Column(name="user_name")
 	private String name;
+	
+	@Column(name="email")
 	private String email;
+	
+	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+	@JoinColumn(name = "users_id", nullable = false)
 	private Set<UserDetails> userDetails;
 	
 	
 	/**
 	 * @param id the id to set
 	 */
-	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	public void setId(Integer id) {
 		this.id = id;
 	}
@@ -58,7 +66,6 @@ public class Users implements Serializable{
 	/**
 	 * @param name the name to set
 	 */
-	@Column(name="user_name")
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -71,7 +78,6 @@ public class Users implements Serializable{
 	/**
 	 * @param email the email to set
 	 */
-	@Column(name="email")
 	public void setEmail(String email) {
 		this.email = email;
 	}
@@ -79,8 +85,6 @@ public class Users implements Serializable{
 	/**
 	 * @return the userDetails
 	 */
-	@OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-	@JoinColumn(name = "users_id", nullable = false)
 	public Set<UserDetails> getUserDetails() {
 		return userDetails;
 	}

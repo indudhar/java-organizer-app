@@ -44,14 +44,14 @@ public class JdbcUserDAOTest {
 
 	@Test
 	public void findByUserName(){
-		User testUser = this.userDAO.findByUserName("indu");
+		User testUser = (User)this.userDAO.findByUserName("indu");
 		assertEquals(testUser.getName(), "indu");
 	}
 	
 	@Test
 	public void insertTest(){
 		this.userDAO.insert(this.mockUser);
-		User testUser = this.userDAO.findByUserName(this.mockUser.getName());
+		User testUser = (User)this.userDAO.findByUserName(this.mockUser.getName());
 		assertEquals(testUser.getEmail(), this.mockUser.getEmail());
 	}
 	
