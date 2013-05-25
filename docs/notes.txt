@@ -2,8 +2,7 @@ Spring
 
 By default, <context:component-scan> looks for classes that are annotated with one
 of a handful of special stereotype annotations:
-1. @Component—A general-purpose stereotype annotation indicating that the class
-is a Spring component
+1. @Component—A general-purpose stereotype annotation indicating that the class is a Spring component
 2. @Controller—Indicates that the class defines a Spring MVC controller
 3. @Repository—Indicates that the class defines a data repository
 4. @Service—Indicates that the class defines a service
