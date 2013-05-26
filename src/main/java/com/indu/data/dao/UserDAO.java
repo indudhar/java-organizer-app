@@ -10,9 +10,9 @@ import com.indu.data.User;
  */
 public interface UserDAO {
 	
-	public void insert(User user);
-	public void update(User user);
-	public void deleteById(int id);
+	public boolean insert(User user);
+	public boolean update(User user);
+	public boolean deleteById(int id);
 	public Object findById(int id);
 	public Object findByUserName(String userName);
 

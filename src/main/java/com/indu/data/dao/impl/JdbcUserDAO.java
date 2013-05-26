@@ -70,16 +70,18 @@ public class JdbcUserDAO implements UserDAO {
 	 * @see com.indu.data.dao.UserDAO#insert(com.indu.data.User)
 	 */
 	@Override
-	public void insert(User user) {
+	public boolean insert(User user) {
 		this.jdbcTemplate.update("insert into users (user_name, email) values (?,?)", user.getName(), user.getEmail());
+		return true;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.indu.data.dao.UserDAO#update(com.indu.data.User)
 	 */
 	@Override
-	public void update(User user) {
+	public boolean update(User user) {
 		this.jdbcTemplate.update("update users set user_name=?, email=? where id=?", user.getName(), user.getEmail(), user.getId());
+		return true;
 		
 	}
 
@@ -87,9 +89,9 @@ public class JdbcUserDAO implements UserDAO {
 	 * @see com.indu.data.dao.UserDAO#deleteById(int)
 	 */
 	@Override
-	public void deleteById(int id) {
+	public boolean deleteById(int id) {
 		this.jdbcTemplate.update("delete from users where id=?",id);
-		
+		return true;
 	}
 	
 

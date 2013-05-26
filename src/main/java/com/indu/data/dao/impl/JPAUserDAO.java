@@ -34,27 +34,24 @@ public class JPAUserDAO implements UserDAO {
 	 * @see com.indu.data.dao.UserDAO#insert(com.indu.data.User)
 	 */
 	@Override
-	public void insert(User user) {
-		// TODO Auto-generated method stub
-
+	public boolean insert(User user) {
+		return true;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.indu.data.dao.UserDAO#update(com.indu.data.User)
 	 */
 	@Override
-	public void update(User user) {
-		// TODO Auto-generated method stub
-
+	public boolean update(User user) {
+		return true;
 	}
 
 	/* (non-Javadoc)
 	 * @see com.indu.data.dao.UserDAO#deleteById(int)
 	 */
 	@Override
-	public void deleteById(int id) {
-		// TODO Auto-generated method stub
-
+	public boolean deleteById(int id) {
+		return true;
 	}
 
 	/* (non-Javadoc)

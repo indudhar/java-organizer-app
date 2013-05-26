@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.internal.runners.JUnit4ClassRunner;
@@ -40,34 +41,39 @@ public class JdbcUserDAOTest {
 		when(this.mockUser.getId()).thenReturn(1);
 		when(this.mockUser.getName()).thenReturn("Lisa");
 		when(this.mockUser.getEmail()).thenReturn("lisa@email.com");
+		
+		this.userDAO.insert(this.mockUser);
 	}
 
 	@Test
-	public void findByUserName(){
-		User testUser = (User)this.userDAO.findByUserName("indu");
-		assertEquals(testUser.getName(), "indu");
-	}
-	
-	@Test
-	public void insertTest(){
-		this.userDAO.insert(this.mockUser);
+	public void insertAndFindByUserNameTest(){
 		User testUser = (User)this.userDAO.findByUserName(this.mockUser.getName());
 		assertEquals(testUser.getEmail(), this.mockUser.getEmail());
 	}
 	
 	@Test
 	public void updateTest(){
-		
-	}
-	
-	@Test
-	public void deleteByIdTest(){
-		
+		final String newEmail = "new@email.com";
+		User testUser = (User)this.userDAO.findByUserName("Lisa");
+		testUser.setEmail(newEmail);
+		this.userDAO.update(testUser);
+		testUser = (User)this.userDAO.findByUserName("Lisa");
+		assertEquals(testUser.getEmail(),newEmail);
 	}
 	
 	@Test
 	public void findById(){
-		
+		User testUser = (User)this.userDAO.findByUserName(this.mockUser.getName());
+		User testUserById = (User)this.userDAO.findById(testUser.getId());
+		assertEquals(testUser.getName(), testUserById.getName());
 	}
+	
+	@After
+	public void cleanup(){
+		User testUser = (User)this.userDAO.findByUserName(this.mockUser.getName());
+		this.userDAO.deleteById(testUser.getId());
+	}
+	
+	
 
 }
