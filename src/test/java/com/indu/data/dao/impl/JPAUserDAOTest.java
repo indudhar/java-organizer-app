@@ -11,12 +11,11 @@ import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.indu.data.User;
-import com.indu.data.dao.UserDAO;
+import com.indu.data.dao.UsersDAO;
 import com.indu.data.persistence.Users;
 
 /**
- * Tests for JPAUserDAO class
+ * Tests for JPAUsersDAO class
  * 
  * @author Indu Devanath
  *
@@ -24,8 +23,8 @@ import com.indu.data.persistence.Users;
 @RunWith(JUnit4ClassRunner.class)
 public class JPAUserDAOTest {
 	
-	UserDAO userDAO;
-	User mockUser;
+	UsersDAO userDAO;
+	Users mockUser;
 	
 	/**
 	 * Get the Application Context so you can test the jdbcUserDAO bean.
@@ -35,9 +34,9 @@ public class JPAUserDAOTest {
 	@Before
 	public void initialize(){
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		this.userDAO = (UserDAO)context.getBean("jpaUserDAO");
+		this.userDAO = (UsersDAO)context.getBean("jpaUserDAO");
 		
-		this.mockUser = mock(User.class);
+		this.mockUser = mock(Users.class);
 		when(this.mockUser.getId()).thenReturn(1);
 		when(this.mockUser.getName()).thenReturn("Lisa");
 		when(this.mockUser.getEmail()).thenReturn("lisa@email.com");

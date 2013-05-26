@@ -6,8 +6,7 @@ import javax.persistence.PersistenceContext;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.indu.data.User;
-import com.indu.data.dao.UserDAO;
+import com.indu.data.dao.UsersDAO;
 import com.indu.data.persistence.Users;
 
 /**
@@ -18,23 +17,19 @@ import com.indu.data.persistence.Users;
  */
 @Repository(value="jpaUserDAO")
 @Transactional
-public class JPAUserDAO implements UserDAO {
+public class JPAUsersDAO implements UsersDAO {
 	
+	@PersistenceContext
 	private EntityManager em;
 	
-	/**
-	 * @param em the em to set
-	 */
-	@PersistenceContext
-	public void setEm(EntityManager em) {
-		this.em = em;
-	}
+	
 
 	/* (non-Javadoc)
 	 * @see com.indu.data.dao.UserDAO#insert(com.indu.data.User)
 	 */
 	@Override
-	public boolean insert(User user) {
+	public boolean insert(Users user) {
+		em.persist(user);
 		return true;
 	}
 
@@ -42,7 +37,7 @@ public class JPAUserDAO implements UserDAO {
 	 * @see com.indu.data.dao.UserDAO#update(com.indu.data.User)
 	 */
 	@Override
-	public boolean update(User user) {
+	public boolean update(Users user) {
 		return true;
 	}
 
@@ -66,7 +61,7 @@ public class JPAUserDAO implements UserDAO {
 	 * @see com.indu.data.dao.UserDAO#findByUserName(java.lang.String)
 	 */
 	@Override
-	public User findByUserName(String userName) {
+	public Users findByUserName(String userName) {
 		// TODO Auto-generated method stub
 		return null;
 	}
