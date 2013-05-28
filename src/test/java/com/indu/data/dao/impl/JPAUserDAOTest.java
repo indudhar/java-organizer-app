@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.internal.runners.JUnit4ClassRunner;
@@ -40,12 +41,29 @@ public class JPAUserDAOTest {
 		when(this.mockUser.getId()).thenReturn(1);
 		when(this.mockUser.getName()).thenReturn("Lisa");
 		when(this.mockUser.getEmail()).thenReturn("lisa@email.com");
+		
+		this.userDAO.insert(this.mockUser);
 	}
 	
 	@Test
-	public void findById(){
+	public void findByIdTest(){
 		Users user = (Users)this.userDAO.findById(1);
 		assertEquals(user.getName(), "indu");
+		
+	}
+	
+	@Test
+	public void updateTest(){
+		
+	}
+	
+	@Test
+	public void findByUserNameTest(){
+		
+	}
+	
+	@After
+	public void deleteTestData(){
 		
 	}
 

@@ -1,5 +1,7 @@
 package com.indu.data.dao;
 
+import java.util.List;
+
 import com.indu.data.persistence.Users;
 
 
@@ -14,7 +16,8 @@ public interface UsersDAO {
 	public boolean insert(Users user);
 	public boolean update(Users user);
 	public boolean deleteById(int id);
+	public boolean delete(Users user);
 	public Users findById(int id);
-	public Users findByUserName(String userName);
+	public List<Users> findByUserName(String userName);
 
 }

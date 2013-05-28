@@ -1,5 +1,7 @@
 package com.indu.data.dao.impl;
 
+import java.util.List;
+
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
@@ -38,6 +40,12 @@ public class JPAUsersDAO implements UsersDAO {
 	 */
 	@Override
 	public boolean update(Users user) {
+		em.merge(user);
+		return true;
+	}
+
+	public boolean delete(Users user){
+		this.em.remove(user);
 		return true;
 	}
 
@@ -46,9 +54,11 @@ public class JPAUsersDAO implements UsersDAO {
 	 */
 	@Override
 	public boolean deleteById(int id) {
+		Users user = findById(id);
+		delete(user);
 		return true;
 	}
-
+	
 	/* (non-Javadoc)
 	 * @see com.indu.data.dao.UserDAO#findById(int)
 	 */
@@ -61,9 +71,8 @@ public class JPAUsersDAO implements UsersDAO {
 	 * @see com.indu.data.dao.UserDAO#findByUserName(java.lang.String)
 	 */
 	@Override
-	public Users findByUserName(String userName) {
-		// TODO Auto-generated method stub
-		return null;
+	public List<Users> findByUserName(String userName) {
+		return this.em.createQuery("select u from Users u where u.name = :searchName").setParameter("searchName", userName).getResultList();
 	}
 
 }
