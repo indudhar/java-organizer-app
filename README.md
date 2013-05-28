@@ -1,18 +1,19 @@
 java-organizer-app
 ===========================
 
-We have been involved in building web apps for a long time, 
-and we constantly put together Spring and Hibernate.  After each such adventure, we  
-close the doors, give the code to the rightful owner and return empty handed.  All of these 
-implementations were proprietary.  Every time we embarked on a new project, we felt as if we are 
-doing the same thing all over again!  We strongly felt that we needed a base implementation that 
-we can later modify and build upon.  We also need a sand box app for new recruits and team members
-to play with.  The app needs to be maintained and constantly upgraded to keep up with the trends.
+This is a sandbox java web application built with the following technologies.  
 
-Keeping in mind the above requirements, we intend to build an organizer app with a simplified business case. 
-The project is in its initial inception phase.
+EJB3
+Spring
+Hibernate
+jQuery
+JUnit
+Maven
 
-We are extremely open minded and welcome your comments and suggestions.
+The project is in its initial inception phase and has a simplified business case.  
+
+You can download the project freely and play with it to your heart's content.  If playing with this application helps you pick up a few knowledge bites, 
+then our intention is completely fulfilled.  Likewise, if you have tips to improve this application, please do let us know.
 
 Our work is freely distributed under Creative Commons Attribution 3.0 Unported.
 
