@@ -4,8 +4,7 @@ java-organizer-app
 This is a sandbox java web application built with the following technologies.  
 
 Spring
-JPA
-Hibernate
+JPA - Hibernate
 jQuery
 JUnit
 Maven
