@@ -2,9 +2,11 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<link type="text/css" rel="stylesheet" href="static/style.css"/>
 <title></title>
 </head>
 <body>
 	<h1>${message}</h1>
+	<p><a href="new_registration">New Registration</a></p>
 </body>
 </html>
