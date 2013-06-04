@@ -15,11 +15,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class OrganizerController {
 
 	@RequestMapping({"/","/home","/start"})
-	public String printWelcome(ModelMap model) {
+	public String startHome(ModelMap model) {
 		
-		model.addAttribute("message", "Starter App");
+		model.addAttribute("message", "Home Page");
 		return "start";
 
+	}
+	
+	@RequestMapping("/new_registration")
+	public String newRegistration(){
+		return "newRegister";
 	}
 	
 }
