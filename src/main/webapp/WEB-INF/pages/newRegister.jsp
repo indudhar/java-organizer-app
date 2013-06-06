@@ -10,8 +10,19 @@
 </head>
 <body>
 <h1>Register New User</h1>
-	<sf:form method="POST">
-	
+	<sf:form method="POST" modelAttribute="registrant">
+		<fieldset>
+		<legend>Registrant Details</legend>
+			<table>
+				<tr>
+					<th><sf:label for="regName" path="regName">Name:</sf:label></th>
+					<td><sf:input path="regName"/> <sf:errors path="regName"/></td>
+				</tr>
+				<tr>
+					<th></th><td><input type="submit" /></td>
+				</tr>
+			</table>
+		</fieldset>
 	</sf:form>
 </body>
 </html>
