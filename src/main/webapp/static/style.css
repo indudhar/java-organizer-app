@@ -1,3 +1,8 @@
 body {
 	font-family:Verdana;
 }
+
+.error {
+	color:red;
+	font-style: italic;
+}

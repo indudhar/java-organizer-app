@@ -16,7 +16,7 @@
 			<table>
 				<tr>
 					<th><sf:label for="regName" path="regName">Name:</sf:label></th>
-					<td><sf:input path="regName"/> <sf:errors path="regName"/></td>
+					<td><sf:input path="regName"/> <sf:errors path="regName" cssClass="error"/></td>
 				</tr>
 				<tr>
 					<th></th><td><input type="submit" /></td>

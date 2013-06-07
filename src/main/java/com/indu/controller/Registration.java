@@ -26,6 +26,9 @@ public class Registration {
 	
 	@RequestMapping(method=RequestMethod.POST)
 	public String addRegistrant(@Valid Registrant registrant, BindingResult result, Model model){
+		if(result.hasErrors()){
+			return "newRegister";
+		}
 		model.addAttribute("registrant",registrant);
 		return "registrantDetails";
 	}
