@@ -7,6 +7,7 @@
 </head>
 <body>
 	<h1>${message}</h1>
-	<p><a href="new_registration">New Registration</a></p>
+	<p><a href="registration">New Registration</a></p>
+	<p><a href="registration/search">Search for Registrant</a></p>
 </body>
 </html>
