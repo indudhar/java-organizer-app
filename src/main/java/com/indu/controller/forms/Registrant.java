@@ -11,7 +11,7 @@ public class Registrant {
 	@Pattern(regexp="[a-zA-Z'\\s]*",message="Name should have alphabets only.")
 	private String regName;
 	
-	@Pattern(regexp="[\\d]+",message="Please enter a number")
+	@Pattern(regexp="[\\d]*",message="Please enter a number")
 	private String id;
 
 	public String getRegName() {

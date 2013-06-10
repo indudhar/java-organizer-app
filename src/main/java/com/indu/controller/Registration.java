@@ -1,5 +1,7 @@
 package com.indu.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,11 +42,18 @@ public class Registration {
 		return "registrantDetails";
 	}
 	
-	@RequestMapping(value="{id}", method=RequestMethod.GET)
-	public String showSearchResult(@PathVariable Long id, Model model){
+	@RequestMapping(value="/id/{id}", method=RequestMethod.GET)
+	public String showSearchResultById(@PathVariable Long id, Model model){
 		Users users = this.usersDAO.findById(id.intValue());
 		model.addAttribute("user", users);
-		return "searchResult";
+		return "searchResultById";
+	}
+	
+	@RequestMapping(value="/name/{name}", method=RequestMethod.GET)
+	public String showSearchResultByName(@PathVariable String name, Model model){
+		List<Users> userList = this.usersDAO.findByUserName(name);
+		model.addAttribute("userList", userList);
+		return "searchResultByName";
 	}
 	
 	@RequestMapping(value="/search", method=RequestMethod.GET)
@@ -58,7 +67,12 @@ public class Registration {
 		if(result.hasErrors()){
 			return "searchRegistrant";
 		}
-		return "redirect:/registration/"+registrant.getId();
+		if(registrant.getId()!=null && registrant.getId().length()>0 && Long.parseLong(registrant.getId())>0){
+			return "redirect:/registration/id/"+registrant.getId();
+		}else{
+			return "redirect:/registration/name/"+registrant.getRegName();
+		}
+		
 	}
 
 }

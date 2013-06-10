@@ -18,6 +18,11 @@
 					<th><sf:label for="id" path="id">By Id:</sf:label></th>
 					<td><sf:input path="id"/> <sf:errors path="id" cssClass="error"/></td>
 				</tr>
+				<tr><th></th><th>Or</th></tr>
+				<tr>
+					<th><sf:label for="regName" path="regName">By Name:</sf:label></th>
+					<td><sf:input path="regName"/> <sf:errors path="regName" cssClass="error"/></td>
+				</tr>
 				<tr>
 					<th></th><td><input type="submit" /></td>
 				</tr>
