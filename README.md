@@ -7,6 +7,7 @@ This is a simple java web application used to showcase the following technologie
 
 - Spring
 - JPA - Hibernate
+- Web Services
 - jQuery
 - JUnit & Mockito
 - Maven
@@ -14,7 +15,8 @@ This is a simple java web application used to showcase the following technologie
 Business Case:
 
 Organize tasks.  Each task consists of a task title, task description, create date and expected completion date.
-Actions - create, archive or delete a task 
+Actions - create, archive or delete a task.  Show live weather forecast. 
+
 
 You can download the project freely and play with it to your heart's content.  If playing with this application helps you pick up a few knowledge bites, 
 then our intention is completely fulfilled.  Likewise, if you have tips to improve this application, please do let us know.
