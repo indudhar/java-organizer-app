@@ -1,8 +1,9 @@
-package com.indu.data.dao;
+package org.indu.data.dao;
 
 import java.util.List;
 
-import com.indu.data.persistence.Users;
+import org.indu.data.persistence.Users;
+
 
 
 /**

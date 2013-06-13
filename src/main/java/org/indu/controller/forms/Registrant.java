@@ -1,4 +1,4 @@
-package com.indu.controller.forms;
+package org.indu.controller.forms;
 
 import javax.validation.constraints.Pattern;
 

@@ -1,4 +1,4 @@
-package com.indu.data.persistence;
+package org.indu.data.persistence;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

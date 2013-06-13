@@ -21,7 +21,7 @@
 		<property name="password" value="12345" />
 	</bean>
 	
-	<context:component-scan base-package="com.indu.data.dao.impl" />
+	<context:component-scan base-package="org.indu.data.dao.impl" />
  	
  	<tx:annotation-driven />
  	

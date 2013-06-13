@@ -1,4 +1,4 @@
-package com.indu.data;
+package org.indu.data;
 
 /**
  * Data object for 'users' table

@@ -8,8 +8,8 @@
     <persistence-unit name="simple-jpa">
         <provider>org.hibernate.ejb.HibernatePersistence</provider>
         
-        <class>com.indu.data.persistence.Users</class>
-        <class>com.indu.data.persistence.UserDetails</class>
+        <class>org.indu.data.persistence.Users</class>
+        <class>org.indu.data.persistence.UserDetails</class>
         
         <exclude-unlisted-classes/>
         

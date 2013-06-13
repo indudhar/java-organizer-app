@@ -1,6 +1,6 @@
-package com.indu.data.dao;
+package org.indu.data.dao;
 
-import com.indu.data.User;
+import org.indu.data.User;
 
 
 /**

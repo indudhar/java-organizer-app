@@ -1,15 +1,15 @@
-package com.indu.data.dao.impl;
+package org.indu.data.dao.impl;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
+import org.indu.data.dao.UsersDAO;
+import org.indu.data.persistence.Users;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.indu.data.dao.UsersDAO;
-import com.indu.data.persistence.Users;
 
 /**
  * JPA Implementation for working with User tables
@@ -27,7 +27,7 @@ public class JPAUsersDAO implements UsersDAO {
 	
 
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#insert(com.indu.data.User)
+	 * @see org.indu.data.dao.UserDAO#insert(org.indu.data.User)
 	 */
 	@Override
 	public boolean insert(Users user) {
@@ -36,7 +36,7 @@ public class JPAUsersDAO implements UsersDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#update(com.indu.data.User)
+	 * @see org.indu.data.dao.UserDAO#update(org.indu.data.User)
 	 */
 	@Override
 	public boolean update(Users user) {
@@ -50,7 +50,7 @@ public class JPAUsersDAO implements UsersDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#deleteById(int)
+	 * @see org.indu.data.dao.UserDAO#deleteById(int)
 	 */
 	@Override
 	public boolean deleteById(int id) {
@@ -60,7 +60,7 @@ public class JPAUsersDAO implements UsersDAO {
 	}
 	
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#findById(int)
+	 * @see org.indu.data.dao.UserDAO#findById(int)
 	 */
 	@Override
 	public Users findById(int id) {
@@ -68,7 +68,7 @@ public class JPAUsersDAO implements UsersDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#findByUserName(java.lang.String)
+	 * @see org.indu.data.dao.UserDAO#findByUserName(java.lang.String)
 	 */
 	@Override
 	public List<Users> findByUserName(String userName) {

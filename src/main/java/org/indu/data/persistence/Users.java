@@ -1,4 +1,4 @@
-package com.indu.data.persistence;
+package org.indu.data.persistence;
 
 import java.io.Serializable;
 import java.util.Set;

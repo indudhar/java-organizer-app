@@ -1,17 +1,17 @@
-package com.indu.data.dao.impl;
+package org.indu.data.dao.impl;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
+import org.indu.data.User;
+import org.indu.data.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
-import com.indu.data.User;
-import com.indu.data.dao.UserDAO;
 
 /**
  * JDBC implementation for User
@@ -33,7 +33,7 @@ public class JdbcUserDAO implements UserDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#findById(int)
+	 * @see org.indu.data.dao.UserDAO#findById(int)
 	 */
 	@Override
 	public User findById(int id) {
@@ -50,7 +50,7 @@ public class JdbcUserDAO implements UserDAO {
 	}
 	
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#findByUserName(java.lang.String)
+	 * @see org.indu.data.dao.UserDAO#findByUserName(java.lang.String)
 	 */
 	@Override
 	public User findByUserName(String userName) {
@@ -67,7 +67,7 @@ public class JdbcUserDAO implements UserDAO {
 	}
 	
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#insert(com.indu.data.User)
+	 * @see org.indu.data.dao.UserDAO#insert(org.indu.data.User)
 	 */
 	@Override
 	public boolean insert(User user) {
@@ -76,7 +76,7 @@ public class JdbcUserDAO implements UserDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#update(com.indu.data.User)
+	 * @see org.indu.data.dao.UserDAO#update(org.indu.data.User)
 	 */
 	@Override
 	public boolean update(User user) {
@@ -86,7 +86,7 @@ public class JdbcUserDAO implements UserDAO {
 	}
 
 	/* (non-Javadoc)
-	 * @see com.indu.data.dao.UserDAO#deleteById(int)
+	 * @see org.indu.data.dao.UserDAO#deleteById(int)
 	 */
 	@Override
 	public boolean deleteById(int id) {

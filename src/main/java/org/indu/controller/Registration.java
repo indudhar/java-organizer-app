@@ -1,9 +1,12 @@
-package com.indu.controller;
+package org.indu.controller;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
+import org.indu.controller.forms.Registrant;
+import org.indu.data.dao.UsersDAO;
+import org.indu.data.persistence.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -12,9 +15,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-import com.indu.controller.forms.Registrant;
-import com.indu.data.dao.UsersDAO;
-import com.indu.data.persistence.Users;
 
 /**
  * @author Indu Devanath

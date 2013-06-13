@@ -1,9 +1,11 @@
-package com.indu.data.dao.impl;
+package org.indu.data.dao.impl;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import org.indu.data.dao.UsersDAO;
+import org.indu.data.persistence.Users;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -12,8 +14,6 @@ import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import com.indu.data.dao.UsersDAO;
-import com.indu.data.persistence.Users;
 
 /**
  * Tests for JPAUsersDAO class
