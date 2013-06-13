@@ -1,12 +1,12 @@
 java-organizer-app
 ===========================
 
-This is a sandbox java web application built with the following technologies.  
+This is a simple java web application built with the following technologies.  
 
 - Spring
 - JPA - Hibernate
 - jQuery
-- JUnit
+- JUnit & Mockito
 - Maven
 
 The project is in its initial inception phase and has a simplified business case.  
