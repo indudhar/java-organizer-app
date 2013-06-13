@@ -1,7 +1,9 @@
 java-organizer-app
 ===========================
 
-This is a simple java web application built with the following technologies.  
+(work in progress)
+
+This is a simple java web application used to showcase the following technologies.  
 
 - Spring
 - JPA - Hibernate
