@@ -11,6 +11,7 @@ This is a simple java web application used to showcase the following technologie
 - jQuery
 - JUnit & Mockito
 - Maven
+- PostgreSQL
 
 Business Case:
 
