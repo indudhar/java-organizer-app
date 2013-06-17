@@ -1,4 +1,4 @@
-﻿CREATE TABLE users (
+CREATE TABLE users (
 	id SERIAL,
 	user_name VARCHAR(20) NOT NULL,
 	email VARCHAR(30) NOT NULL,
