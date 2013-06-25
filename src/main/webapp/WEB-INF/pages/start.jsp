@@ -11,5 +11,6 @@
 	<h1>${message}</h1>
 	<p><a href="registration">New Registration</a></p>
 	<p><a href="registration/search">Search for Registrant</a></p>
+	<p><a href="tasks/new">Add new task</a></p>
 </body>
 </html>
