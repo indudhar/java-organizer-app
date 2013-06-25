@@ -17,7 +17,7 @@ public class OrganizerHome {
 	@RequestMapping({"/","/home","/start"})
 	public String startHome(ModelMap model) {
 		
-		model.addAttribute("message", "Home Page");
+		model.addAttribute("message", "Organize your tasks");
 		return "start";
 
 	}
