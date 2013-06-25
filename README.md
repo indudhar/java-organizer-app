@@ -19,8 +19,7 @@ Organize tasks.  Each task consists of a task title, task description, create da
 Actions - create, archive or delete a task.  Show live weather forecast. 
 
 
-You can download the project freely and play with it to your heart's content.  
-You are most welcome to contact me if you have questions.
+You can download the project and play with it to your heart's content.  You are most welcome to contact me if you have questions.
 
 This project is freely distributed under Creative Commons Attribution 3.0 Unported.
 
