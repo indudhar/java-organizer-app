@@ -1,16 +1,16 @@
 
-CREATE TABLE tasks(
+CREATE TABLE task(
 	id SERIAL,
 	task_title VARCHAR(20) NOT NULL,
-	CONSTRAINT tasks_pk PRIMARY KEY (id)
+	CONSTRAINT task_pk PRIMARY KEY (id)
 );
 
-CREATE TABLE task_details(
+CREATE TABLE task_detail(
 	id SERIAL,
-	tasks_id INTEGER,
+	task_id INTEGER,
 	task_description VARCHAR(400),
 	creation_date DATE NOT NULL,
 	due_date DATE NOT NULL,
-	CONSTRAINT task_details_pk PRIMARY KEY (id),
-	CONSTRAINT task_details_fk FOREIGN KEY (tasks_id) REFERENCES tasks(id) ON DELETE CASCADE
+	CONSTRAINT task_detail_pk PRIMARY KEY (id),
+	CONSTRAINT task_detail_fk FOREIGN KEY (task_id) REFERENCES task(id) ON DELETE CASCADE
 );

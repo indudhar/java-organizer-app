@@ -1,8 +1,6 @@
 java-organizer-app
 ===========================
 
-Sometimes, it's essential to keep your programming engine running.  This project is one such effort.
-
 This java web application uses following technologies.  
 
 - Spring

@@ -10,6 +10,8 @@
         
         <class>org.indu.data.persistence.Users</class>
         <class>org.indu.data.persistence.UserDetails</class>
+        <class>org.indu.data.persistence.Task</class>
+        <class>org.indu.data.persistence.TaskDetail</class>
         
         <exclude-unlisted-classes/>
         

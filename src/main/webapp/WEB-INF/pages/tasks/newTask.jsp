@@ -10,7 +10,7 @@
 </head>
 <body>
 <h1>Register New User</h1>
-	<sf:form method="POST" modelAttribute="registrant">
+	<sf:form method="POST" modelAttribute="">
 		<fieldset>
 		<legend>Registrant Details</legend>
 			<table>

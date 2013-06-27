@@ -1,6 +1,5 @@
 package org.indu.data.persistence;
 
-import java.io.Serializable;
 import java.util.Set;
 
 import javax.persistence.CascadeType;
@@ -23,9 +22,7 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name="users")
-public class Users implements Serializable{
-
-	private static final long serialVersionUID = -3260501382177368299L;
+public class Users {
 	
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
