@@ -1,5 +1,8 @@
 package org.indu.data.dao.impl;
 
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
+
 import org.indu.data.dao.TaskDAO;
 import org.indu.data.persistence.Task;
 import org.springframework.stereotype.Repository;
@@ -9,10 +12,11 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 public class TaskJPADAO implements TaskDAO{
 
+	@PersistenceContext
+	private EntityManager entityManager;
 	
 	public void insert(Task task) {
-		// TODO Auto-generated method stub
-		
+		this.entityManager.persist(task);
 	}
 
 	
@@ -22,15 +26,14 @@ public class TaskJPADAO implements TaskDAO{
 	}
 
 	
-	public void delete(Task task) {
-		// TODO Auto-generated method stub
-		
+	public void delete(int id) {
+		Task task = this.entityManager.find(Task.class, id);
+		this.entityManager.remove(task);
 	}
 
 	
 	public Task findTask(int id) {
-		// TODO Auto-generated method stub
-		return null;
+		return this.entityManager.find(Task.class, id);
 	}
 
 }
