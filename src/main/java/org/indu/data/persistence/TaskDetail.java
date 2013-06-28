@@ -1,23 +1,25 @@
 package org.indu.data.persistence;
 
-import java.sql.Date;
+import java.util.Date;
 
 import javax.persistence.Column;
+import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.MapsId;
-import javax.persistence.OneToOne;
+import javax.persistence.Table;
 
 /**
  * JPA entity class for that maps to table "task_detail"
  * @author Indu Devanath
  *
  */
+@Entity
+@Table(name="task_detail")
 public class TaskDetail {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Integer id;
 	
 	@Column(name="task_description", length=400)
@@ -29,10 +31,7 @@ public class TaskDetail {
 	@Column(name="due_date")
 	private Date dueDate;
 	
-	@MapsId
-	@OneToOne
-	@JoinColumn(name="id")
-	private Task task;
+//	private Task task;
 
 	public Integer getId() {
 		return id;
@@ -66,11 +65,11 @@ public class TaskDetail {
 		this.dueDate = dueDate;
 	}
 
-	public Task getTask() {
-		return task;
-	}
-
-	public void setTask(Task task) {
-		this.task = task;
-	}
+//	public Task getTask() {
+//		return task;
+//	}
+//
+//	public void setTask(Task task) {
+//		this.task = task;
+//	}
 }
