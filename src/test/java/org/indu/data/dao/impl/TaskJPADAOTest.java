@@ -6,6 +6,7 @@ import org.indu.data.dao.TaskDAO;
 import org.indu.data.persistence.Task;
 import org.indu.data.persistence.TaskDetail;
 import org.junit.Before;
+import org.junit.Test;
 import org.junit.internal.runners.JUnit4ClassRunner;
 import org.junit.runner.RunWith;
 import org.springframework.context.ApplicationContext;
@@ -35,6 +36,12 @@ public class TaskJPADAOTest {
 		taskDetail.setDueDate(new Date(1000));
 		taskDetail.setTaskDescription("Test My Task Description");
 		
+		task.setTaskDetail(taskDetail);
 	}
-
+	
+	@Test
+	private void testInsert(){
+		this.taskDAO.insert(task);
+		//check database for insert
+	}
 }
